@@ -38,9 +38,9 @@ public partial class MainViewModel : ObservableObject
 
     [RelayCommand]
 
-    void Delete()
+    void Delete(WorkoutPlan workout)
     {
-        
+        Workouts.Remove(workout);
     }
     
     [RelayCommand]

@@ -7,18 +7,26 @@
              x:DataType="ViewModels:MainViewModel">
 <VerticalStackLayout>
     <Label Text="Workouts" FontAttributes="Bold" FontSize="30" Margin="10,50,10,10" ></Label>
-    <CollectionView ItemsSource="{Binding Workouts}">
+        <CollectionView ItemsSource="{Binding Workouts}">
         <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="models:WorkoutPlan">
-                <Frame Margin="10" Padding="10" BackgroundColor="LightGray">
-                    <Frame.GestureRecognizers>
+                <SwipeView>
+                    <SwipeView.RightItems>
+                        <SwipeItem Text="Delete"
+                                   BackgroundColor="LightPink"
+                                   Command="{Binding BindingContext.DeleteCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                   CommandParameter="{Binding .}"/>
+                    </SwipeView.RightItems>
+                    <Border Margin="10" Padding="10" BackgroundColor="LightGray">
+                    <Border.GestureRecognizers>
                         <TapGestureRecognizer
                             Command="{Binding BindingContext.NavigationCommand,
                   Source={RelativeSource AncestorType={x:Type ContentPage}}}"
                             CommandParameter="{Binding .}"/>
-                    </Frame.GestureRecognizers>
+                    </Border.GestureRecognizers>
                     <Label Text="{Binding Name}" FontSize="20" TextColor="Black"/>
-                </Frame>
+                </Border>
+                </SwipeView>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
