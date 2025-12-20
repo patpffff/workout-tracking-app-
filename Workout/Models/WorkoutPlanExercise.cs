@@ -6,7 +6,7 @@ public class WorkoutPlanExercise
 {
     [PrimaryKey, AutoIncrement]
     public int WorkoutPlanExerciseId { get; set; }
-    private int WorkoutPlanID;
-    private int ExerciseID;
-    private int OrderIndex;
+    public int WorkoutPlanID;
+    public int ExerciseID;
+    public int OrderIndex;
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using Workout.ViewModels;
 using CommunityToolkit.Maui;
+using Workout.Data;
 using Workout.Views;
 
 namespace Workout;
@@ -19,6 +20,8 @@ public static class MauiProgram
         
         builder.Services.AddTransient<WorkoutViewModel>();
         builder.Services.AddTransient<WorkoutPage>();
+
+        builder.Services.AddSingleton<WorkoutDatabase>();
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

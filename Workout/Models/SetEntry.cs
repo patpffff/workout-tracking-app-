@@ -6,10 +6,10 @@ public class SetEntry
     [PrimaryKey, AutoIncrement]
     public int SetEntryId { get; set; }
     
-    private int WorkoutPlanExerciseID;
-    private int setNumber;
-    private float weight;
-    private int repetitions;
-    private DateTime performedAt;
+    public int WorkoutPlanExerciseID;
+    public int setNumber;
+    public float weight;
+    public int repetitions;
+    public DateTime performedAt;
     
 }

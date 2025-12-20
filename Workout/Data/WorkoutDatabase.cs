@@ -18,4 +18,25 @@ public class WorkoutDatabase
         await database.CreateTableAsync<Exercise>();
         await database.CreateTableAsync<SetEntry>();
     }
+
+    public async Task<List<WorkoutPlan>> GetWorkoutPlanAsync()
+    {
+        await Init();
+        return await database.Table<WorkoutPlan>().ToListAsync();
+    }
+    
+    public async Task<List<Exercise>> GetExerciseAsync()
+    {
+        await Init();
+        return await database.Table<Exercise>().ToListAsync();
+    }
+    
+    public async Task<List<WorkoutPlanExercise>> GetWorkoutPlanExercise(int WorkoutID)
+    {
+        await Init();
+        return await database.QueryAsync<WorkoutPlanExercise>(
+            "SELECT * FROM WorkoutPlanExercise WHERE WorkoutPlanID = ?",
+            WorkoutID);
+    }
+
 }
