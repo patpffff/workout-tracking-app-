@@ -1,8 +1,11 @@
+using SQLite;
+
 namespace Workout.Models;
 
 public class WorkoutPlanExercise
 {
-    private int WorkoutPlanExerciseID;
+    [PrimaryKey, AutoIncrement]
+    public int WorkoutPlanExerciseId { get; set; }
     private int WorkoutPlanID;
     private int ExerciseID;
     private int OrderIndex;

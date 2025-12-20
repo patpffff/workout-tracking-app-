@@ -1,7 +1,9 @@
+using SQLite;
 namespace Workout.Models;
 
 public class Exercise
 {
-    private int ExerciseID;
-    private string Name;
+    [PrimaryKey, AutoIncrement]
+    public int ExerciseID { get; set; }
+    public string Name;
 }
