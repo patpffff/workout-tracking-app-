@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Maui.Extensions;
@@ -18,9 +19,20 @@ public partial class WorkoutPage : ContentPage
 
     }
     
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+
+        if (BindingContext is WorkoutViewModel vm)
+        {
+            await vm.LoadWorkoutPlanExercisesAsync();
+        }
+    }
+    
     async Task OnAddExerciseRequested()
     {
-        var popup = new AddExercisePopup();
+        var serviceProvider = Application.Current.Handler.MauiContext.Services;
+        var popup = serviceProvider.GetRequiredService<AddExercisePopup>();
         var popupResult = await this.ShowPopupAsync<string>(popup);
         var result = popupResult.Result;
 

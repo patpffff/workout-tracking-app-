@@ -8,61 +8,14 @@
              xmlns:system="clr-namespace:System;assembly=System.Runtime"
              x:Class="Workout.Views.AddExercisePopup">
 
-        <ScrollView>
-        <VerticalStackLayout>
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-            <Label Text="Übung hinzufügen" FontAttributes="Bold" FontSize="20" />
-
-            <!-- WICHTIG -->
-            <Entry x:Name="Exercise" Placeholder="Name der Übung" />
-
-            <HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
+        <ScrollView>    
+            <VerticalStackLayout>
+                <Button 
+                    Text="Neue Übung anlegen"
+                    FontAttributes="Bold" 
+                    Margin="0,0,0,20"/> 
+                <Label Text="Übungen zuordnen" FontAttributes="Bold" FontSize="20" />
+            <HorizontalStackLayout Margin="0,20,0,0" Spacing="10" HorizontalOptions="Center">
                 <Button Text="OK" Clicked="OnOkClicked"/>
                 <Button Text="Abbrechen" Clicked="OnCancelClicked"/>
             </HorizontalStackLayout>
