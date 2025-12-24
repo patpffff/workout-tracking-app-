@@ -42,6 +42,6 @@ public partial class WorkoutPage : ContentPage
         var popup = new AddExercisePopup(vm);
         
         var popupResult = await this.ShowPopupAsync<string>(popup);
-        var result = popupResult.Result;
+
     }
 }
