@@ -11,13 +11,12 @@ namespace Workout.Views;
 
 public partial class WorkoutPage : ContentPage
 {
-    private readonly AddExercisePopupViewModel _popupViewModel;
 
-    public WorkoutPage(WorkoutViewModel vm, AddExercisePopupViewModel popupViewModel)
+
+    public WorkoutPage(WorkoutViewModel vm)
     {
         InitializeComponent();
         BindingContext = vm;
-        _popupViewModel = popupViewModel;
         vm.AddExerciseRequested += OnAddExerciseRequested;
 
     }
@@ -44,12 +43,5 @@ public partial class WorkoutPage : ContentPage
         
         var popupResult = await this.ShowPopupAsync<string>(popup);
         var result = popupResult.Result;
-
-        if (!string.IsNullOrEmpty(result))
-        {
-            // Übergabe ans ViewModel
-           // var vm = (WorkoutViewModel)BindingContext;
-            //vm.AddWorkout(result);
-        }
     }
 }
