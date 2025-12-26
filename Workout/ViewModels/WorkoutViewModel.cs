@@ -10,7 +10,7 @@ namespace Workout.ViewModels;
 
 public partial class WorkoutViewModel : ObservableObject
 {
-    public event Func<Task>? AddExerciseRequested;
+    public event Func<Task>? AddWorkoutExerciseRequested;
     
     WorkoutDatabase _database;
     
@@ -42,8 +42,8 @@ public partial class WorkoutViewModel : ObservableObject
     [RelayCommand]
     async Task AddWithPopup()
     {
-        if (AddExerciseRequested != null)
-            await AddExerciseRequested.Invoke();
+        if (AddWorkoutExerciseRequested != null)
+            await AddWorkoutExerciseRequested.Invoke();
     }
     
     [RelayCommand]

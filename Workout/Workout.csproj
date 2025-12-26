@@ -68,7 +68,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <MauiXaml Update="Views\popups\AddExercisePopup.xaml">
+      <MauiXaml Update="Views\popups\AddWorkoutExercisePopup.xaml">
         <SubType>Designer</SubType>
       </MauiXaml>
       <MauiXaml Update="Views\popups\AddWorkoutPopup.xaml">
@@ -77,7 +77,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Views\popups\AddExercisePopup.xaml.cs">
+      <Compile Update="Views\popups\AddWorkoutExercisePopup.xaml.cs">
         <DependentUpon>AddExercisePopup.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>

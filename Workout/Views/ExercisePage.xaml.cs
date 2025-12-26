@@ -14,5 +14,20 @@ public partial class ExercisePage : ContentPage
     {
         InitializeComponent();
         BindingContext = vm;
+        vm.AddExerciseRequested += OnAddExerciseRequested;
+    }
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+
+        if (BindingContext is ExerciseViewModel vm)
+        {
+            await vm.LoadExercisesAsync();
+        }
+    }
+
+    private Task OnAddExerciseRequested()
+    {
+        //throw new NotImplementedException();
     }
 }

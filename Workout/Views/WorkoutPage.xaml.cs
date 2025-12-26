@@ -16,7 +16,7 @@ public partial class WorkoutPage : ContentPage
     {
         InitializeComponent();
         BindingContext = vm;
-        vm.AddExerciseRequested += OnAddExerciseRequested;
+        vm.AddWorkoutExerciseRequested += OnAddWorkoutExerciseRequested;
 
     }
     
@@ -30,7 +30,7 @@ public partial class WorkoutPage : ContentPage
         }
     }
     
-    async Task OnAddExerciseRequested()
+    async Task OnAddWorkoutExerciseRequested()
     {
         var vm = (WorkoutViewModel)BindingContext;
         
@@ -38,7 +38,7 @@ public partial class WorkoutPage : ContentPage
         await vm.LoadExercisesAsync();
         
         // DANN Popup mit Daten erstellen
-        var popup = new AddExercisePopup(vm);
+        var popup = new AddWorkoutExercisePopup(vm);
         
         var popupResult = await this.ShowPopupAsync<string>(popup, new PopupOptions
         {

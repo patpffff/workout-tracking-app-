@@ -8,6 +8,7 @@ namespace Workout.ViewModels;
 
 public partial class ExerciseViewModel: ObservableObject
 {
+    public event Func<Task>? AddExerciseRequested;
     WorkoutDatabase _database;
     
     [ObservableProperty]
@@ -35,5 +36,12 @@ public partial class ExerciseViewModel: ObservableObject
     {
         await _database.SaveExerciseAsync(Exercise);
         await Shell.Current.GoToAsync("..");
+    }
+    
+    [RelayCommand]
+    async Task AddWithPopup()
+    {
+        if (AddExerciseRequested != null)
+            await AddExerciseRequested.Invoke();
     }
 }
