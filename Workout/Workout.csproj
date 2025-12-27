@@ -74,6 +74,21 @@
       <MauiXaml Update="Views\popups\AddWorkoutPopup.xaml">
         <SubType>Designer</SubType>
       </MauiXaml>
+      <MauiXaml Update="Views\pages\ExerciseDetailPage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+      <MauiXaml Update="Views\pages\ExercisePage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+      <MauiXaml Update="Views\pages\SetEntryPage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+      <MauiXaml Update="Views\pages\WorkoutPage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+      <MauiXaml Update="Views\pages\WorkoutPlanExercisePage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
     </ItemGroup>
 
     <ItemGroup>
@@ -83,6 +98,26 @@
       </Compile>
       <Compile Update="Views\popups\AddWorkoutPopup.xaml.cs">
         <DependentUpon>AddWorkoutPopup.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\pages\ExerciseDetailPage.xaml.cs">
+        <DependentUpon>ExerciseDetailPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\pages\ExercisePage.xaml.cs">
+        <DependentUpon>ExercisePage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\pages\SetEntryPage.xaml.cs">
+        <DependentUpon>SetEntryPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\pages\WorkoutPage.xaml.cs">
+        <DependentUpon>WorkoutPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\pages\WorkoutPlanExercisePage.xaml.cs">
+        <DependentUpon>WorkoutPlanExercisePage.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
     </ItemGroup>
