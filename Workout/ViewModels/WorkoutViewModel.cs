@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using CommunityToolkit.Maui.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Workout.Data;
@@ -49,6 +50,7 @@ public partial class WorkoutViewModel : ObservableObject
             };
             WorkoutPlanExercises.Add(entry);
             await _database.AddWorkoutPlanExercise(entry);
+            await Shell.Current.ClosePopupAsync();
         }
     }
 
@@ -86,8 +88,9 @@ public partial class WorkoutViewModel : ObservableObject
     }
     
     [RelayCommand]
-    public async Task LoadWorkoutPlanExerciseView()
+    public async Task LoadWorkoutPlanExerciseViewAsync()
     {
+        WorkoutPlanExerciseViews.Clear();
         await LoadExercisesAsync();
         await LoadWorkoutPlanExercisesAsync();
         foreach (var wpe in WorkoutPlanExercises)

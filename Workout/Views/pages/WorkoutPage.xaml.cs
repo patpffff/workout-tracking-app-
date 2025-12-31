@@ -27,7 +27,7 @@ public partial class WorkoutPage : ContentPage
 
         if (BindingContext is WorkoutViewModel vm)
         {
-            await vm.LoadWorkoutPlanExercisesAsync();
+            await vm.LoadWorkoutPlanExerciseViewAsync();
         }
     }
     
@@ -46,12 +46,5 @@ public partial class WorkoutPage : ContentPage
             CanBeDismissedByTappingOutsideOfPopup = false,
             PageOverlayColor = Colors.Black.WithAlpha(0.75f)
         });
-        var result = popupResult.Result;
-
-        if (!string.IsNullOrEmpty(result))
-        {
-            // Übergabe ans ViewModel
-            //vm.AddWorkout(result);
-        }
     }
 }
