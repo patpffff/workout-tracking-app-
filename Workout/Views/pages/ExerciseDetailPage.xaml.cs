@@ -14,4 +14,13 @@ public partial class ExerciseDetailPage : ContentPage
         InitializeComponent();
         BindingContext = vm;
     }
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing(); 
+        if (BindingContext is ExerciseDetailViewModel vm)
+        {
+            await vm.LoadSetEntriesAsync();
+        }
+    }
 }
